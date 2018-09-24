@@ -159,7 +159,7 @@ h1 {
   text-align: center;
   margin: 0;
   font-weight: 400;
-  font-size: 1.3rem; }
+  font-size: 1.5rem; }
 
 h4 {
   font-weight: 400;
@@ -181,10 +181,25 @@ h4 {
 .relative {
   position: relative; }
 
-header {
+header, footer {
+  display: flex;
+  align-items: center;
   background: #723FED;
-  color: white;
-  padding: 1.5rem; }
+  color: white; }
+
+header {
+  height: 15vh; }
+
+footer {
+  height: 5vh; }
+  footer a, footer h4 {
+    font-size: 1rem;
+    width: auto;
+    margin: 0;
+    transform: scale(1);
+    transition: transform .3s; }
+  footer a:hover {
+    transform: scale(1.1); }
 
 .repoList {
   display: grid;
@@ -246,7 +261,7 @@ header {
 .searchContainer, .favouritesContainer {
   display: flex;
   align-self: stretch;
-  height: 85vh;
+  height: 80vh;
   padding: 3rem 0 0; }
 
 .favouritesContainer {

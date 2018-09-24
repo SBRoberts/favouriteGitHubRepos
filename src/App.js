@@ -14,8 +14,7 @@ class App extends Component {
       favouriteRepos: [],
     }
   }
-  // MAKE SECOND API TO GET TAGS
-  // https://api.github.com/repos/Shopify/polaris-telescope/tags
+
   componentDidMount(){
   }
 
@@ -45,6 +44,7 @@ class App extends Component {
     })
   }
 
+  // make an api call that appends the most recent tag, if present to each object in an array
   getTags = (array) => {
 
     // create a temporary array to push mutated objects
@@ -69,6 +69,7 @@ class App extends Component {
     })
   }
 
+  // similar functions to both add and remove items from a list
   addToFavourites = (e) => {
     const repoName = e.currentTarget.parentElement.dataset.full_name
 
@@ -170,6 +171,15 @@ class App extends Component {
             </div>
           </section>
         </div>
+        <footer>
+          <div className="wrapper">
+            <div className="row spaceBetween">
+              <h4>Spencer Roberts</h4>
+              <a href="https://spen.io" target="_blank">spen.io</a>
+              <a href="https://github.com/SBRoberts/favouriteGitHubRepos" target="_blank">Link to GitHub Repo</a>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }

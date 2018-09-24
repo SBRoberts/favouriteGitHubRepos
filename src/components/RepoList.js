@@ -16,7 +16,7 @@ const RepoList = (props) => {
             props.repoList.map((repo, i) => {
               return (
                 <li className="repoList" data-full_name={repo.full_name} key={i}>
-                  <a href={repo.html_url}>
+                  <a href={repo.html_url} target="_blank">
                     <h4>{repo.full_name}</h4>
                   </a>
                   <h4>{repo.language}</h4>
