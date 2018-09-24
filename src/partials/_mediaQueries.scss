@@ -1,0 +1,61 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    .repoList{
+        grid-template-columns: 3fr 2fr 1fr 1fr;
+    }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .repoList{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        border: 1px solid $highlight;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        &__heading{
+            background: $light;
+            border: none;
+        }
+    }
+    .moveRepoButton{
+        width: 3rem;
+    }
+    .floatingLabel{
+        &__input{
+            // margin-bottom: .5rem;
+        }
+        &__submit{
+            // margin: 0;
+            width: 100%;
+        }
+    }
+    .favouritesContainer{
+        .repoList{
+            &__heading{
+                background: white;
+                border: none;
+            }
+        }
+    }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .row {
+        flex-wrap: wrap;
+        .half{
+            width: 100%;
+        }
+    }
+    .floatingLabel{
+        &__input{
+            margin-bottom: .5rem;
+        }
+        &__submit{
+            margin: 0;
+            width: 100%;
+        }
+    }
+    .searchContainer, .favouritesContainer{
+        height: inherit;
+    }
+}
